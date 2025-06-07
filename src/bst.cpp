@@ -140,6 +140,35 @@ BST::Node** BST::find_node(int val) {
 
 }
 
+BST::Node** BST::find_parrent(int val) {
+    if (root == nullptr) return nullptr;
+
+    // 如果BST的根结点和当前的相同
+    if (root->value == val) return nullptr;
+
+    Node* current = root;
+    Node* parent = nullptr;
+
+    while (current != nullptr) {
+        if (val < current->value) {
+            parent = current;
+            current = current->left;
+        } else if (val > current->value) {
+            parent = current;
+            current = current->right;
+        } else {
+            // 找到节点，返回父节点指针的指针
+            if (parent == nullptr) {
+                return &root;
+            }
+            return &parent;
+        }
+    }
+    return nullptr;
+
+
+}
+
 
 
 
