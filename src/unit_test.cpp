@@ -31,7 +31,7 @@ TEST(HW3Test, TEST3) {
     EXPECT_EQ(default_.left, nullptr);
     EXPECT_EQ(default_.right, nullptr);
 }
-/*
+
 TEST(HW3Test, TEST4) {
 
     BST::Node left{10, nullptr, nullptr};
@@ -174,7 +174,7 @@ TEST(HW3Test, TEST13) {
     BST::Node** node{bst.find_node(11)};
     EXPECT_EQ(node, nullptr);
 }
-
+/*
 TEST(HW3Test, TEST14) {
     BST bst{};
     bst.add_node(25);
